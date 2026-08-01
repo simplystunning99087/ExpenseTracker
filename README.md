@@ -1,70 +1,47 @@
-# Getting Started with Create React App
+# 💰 Expense Tracker – React + Supabase
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack, multi-user expense tracking application built with **React** and **Supabase**. Features real-time synchronization, dark mode, voice input, budget management, and user-specific data isolation—all deployed on **Vercel**.
 
-## Available Scripts
+> 🚀 **Live Demo**: [expensetracker-seven-lemon.vercel.app](https://expensetracker-seven-lemon.vercel.app)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## ✨ Key Features
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- 🔐 **Authentication** – Fully functional Sign Up / Sign In with Supabase Auth.
+- 🔒 **User Data Isolation** – Every user sees *only* their own transactions and budgets.
+- 💰 **Income & Expense Tracking** – Add transactions with categories, descriptions, and amounts.
+- 📊 **Dashboard Analytics** – Automatically calculates totals, income, and expenses.
+- 🍩 **Visual Spending Breakdown** – Interactive Pie Chart powered by Recharts.
+- 🎯 **Budget Management** – Set monthly budgets per category with real-time progress bars.
+- 🎤 **Voice Input** – Speak your transactions! The app auto-detects amounts and categories.
+- 🌙 **Dark Mode** – Seamless light/dark theme toggling with local storage persistence.
+- 📆 **Filtering** – View transactions for "All Time", "This Month", "Last Month", or "Custom Month".
+- 📥 **CSV Export** – Download your filtered transaction history as a `.csv` file.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+---
 
-### `npm test`
+## 🛠️ Tech Stack
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- **Frontend**: React (Hooks, Context API, useReducer)
+- **Backend & Auth**: Supabase (PostgreSQL, Realtime subscriptions, Row Level Security)
+- **Styling**: Inline styles + CSS Modules (Dark/light mode support)
+- **Charts**: Recharts
+- **Notifications**: React Hot Toast
+- **Icons**: React Icons
+- **Deployment**: Vercel
 
-### `npm run build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## 📂 Project Structure
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+```text
+mm/
+├── public/               # Static assets, manifest.json
+├── src/
+│   ├── components/       # Auth, Dashboard, BudgetManager, TransactionForm, etc.
+│   ├── context/          # AuthContext, GlobalState, BudgetContext, ThemeContext
+│   ├── supabaseClient.js # Supabase connection config
+│   └── App.js            # Main app wrapper with routing logic
+├── package.json          # Dependencies and scripts
+└── README.md             # You are here!
