@@ -1,0 +1,79 @@
+/* src/components/TransactionForm.module.css */
+.formContainer {
+  margin: 20px 0;
+  padding: 20px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.formContainer.dark {
+  background: #1a1a2e;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.formContainer h3 {
+  margin-top: 0;
+}
+
+.formGroup {
+  margin-bottom: 10px;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.formGroup input,
+.formGroup select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+.formGroup input.error {
+  border-color: #e74c3c;
+}
+
+.errorText {
+  color: #e74c3c;
+  margin: 5px 0 0;
+  font-size: 14px;
+}
+
+.submitBtn {
+  width: 100%;
+  padding: 12px;
+  background: #2ecc71;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.submitBtn:hover {
+  background: #27ae60;
+}
+
+/* TransactionForm.module.css – add at the end */
+@media (max-width: 600px) {
+  .formContainer {
+    padding: 15px;
+  }
+
+  .formContainer input,
+  .formContainer select {
+    font-size: 16px; /* Prevent zoom on mobile */
+  }
+
+  .submitBtn {
+    font-size: 14px;
+    padding: 12px;
+  }
+}

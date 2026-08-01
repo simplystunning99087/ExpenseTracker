@@ -1,0 +1,173 @@
+/* src/App.module.css */
+
+/* Main Container */
+.container {
+  max-width: 700px;
+  margin: 30px auto;
+  padding: 20px;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+
+.container.light {
+  background-color: #ffffff;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  color: #2c3e50;
+}
+
+.container.dark {
+  background-color: #16213e;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  color: #e0e0e0;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.themeToggle {
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  padding: 5px 10px;
+  border-radius: 50%;
+  transition: transform 0.3s ease;
+}
+
+.themeToggle:hover {
+  transform: rotate(20deg);
+}
+
+/* Filter Bar */
+.filterBar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.filterBar.dark {
+  color: #e0e0e0;
+}
+
+.filterLabel {
+  font-weight: bold;
+}
+
+.filterSelect,
+.filterInput {
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  background: #fff;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.filterSelect.dark,
+.filterInput.dark {
+  background: #333;
+  color: #fff;
+  border-color: #555;
+}
+
+.transactionCount {
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+/* Export Button Wrapper */
+.exportWrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.exportBtn {
+  padding: 12px 30px;
+  background: #2980b9;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.exportBtn.dark {
+  background: #3498db;
+}
+
+.exportBtn:hover {
+  background: #1a5276;
+}
+
+.exportBtn.dark:hover {
+  background: #5dade2;
+}
+
+/* App.module.css – add at the end */
+
+/* Mobile devices (max-width: 600px) */
+@media (max-width: 600px) {
+  .container {
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+  }
+
+  .header {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 10px;
+  }
+
+  .header h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .header > div {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .filterBar {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 8px;
+  }
+
+  .filterBar select,
+  .filterBar input {
+    width: 100%;
+  }
+
+  .exportWrapper {
+    margin-top: 20px;
+  }
+
+  .exportBtn {
+    width: 100%;
+    padding: 12px;
+  }
+}
+
+/* Tablet devices (601px to 1024px) */
+@media (min-width: 601px) and (max-width: 1024px) {
+  .container {
+    margin: 20px;
+    padding: 20px;
+  }
+}
